@@ -53,8 +53,17 @@ body {
     padding-left: 15px;
     padding-right: 15px;
 }
+.main {
+    position: relative;
+}
+.main .title-h1{
+    position: relative;
+    z-index: 4;
+}
 .name {
     font-size: 28px;
+    z-index: 3;
+    position: relative;
 }
 .title-h1 {
     font-size: 74px;
@@ -103,6 +112,9 @@ header {
     padding-top: 100px;
     padding-bottom: 60px;
 }
+.social-item:last-child {
+    position: relative;
+}
 .project {
     margin: 0;
     display: flex;
@@ -130,12 +142,42 @@ header {
 .skill .description {
     line-height: 150%;
 }
-
+.section-steps {
+    padding-top: 180px;
+    padding-bottom: 198px;
+}
+.steps-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 150%;
+}
+.steps-title{
+    font-size: 28px;
+}
+.steps-title span {
+    margin-right: 45px;
+}
+.steps-description {
+    font-size: 16px;
+}
 .circle-main {
     width: 253px;
     height: 253px;
+    position: absolute;
+    left: -128px;
+    top: calc(50% - 126px);
+    z-index: 1;
+}
+.triangle {
+    position: absolute;
+    z-index: 2;
+    left: -151px;
 }
 .circle-nav {
     width: 106px;
     height: 106px;
+    position: absolute;
+    right: 36px;
+    top: calc(50% - 53px);
 }
