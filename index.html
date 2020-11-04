@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -232,7 +233,7 @@
                                 </div>
                             </div>
                         </div>
-                        </div>
+                    </div>
                 </section>
             </div>
         </div>
@@ -338,8 +339,67 @@
                     </div>
                 </div>
             </div>
-            </section>    
+            </section> 
+            <section class="section-tech">
+                <div class="tech">
+                    <div class="tech-item html">
+                        <img class="tech-image" src="img/tech/html5.svg" alt="HTML5" title="Язык гипертекстовой разметки">
+                    </div>
+                    <div class="tech-item css">
+                        <img class="tech-image" src="img/tech/css.svg" alt="CSS" title="Каскадные таблицы стилей">
+                    </div>
+                    <div class="tech-item js">
+                        <img class="tech-image" src="img/tech/JavaScript.svg" alt="JavaScript" title="JavaScript ES6+
+                        Язык программирования высокого уровня, использующийся для придания интерактивности веб-страницам">
+                    </div>
+                    <div class="tech-item jquery">
+                        <img class="tech-image" src="img/tech/jquery.svg" alt="jQuery" title="Популярная библеотека JavaScript">
+                    </div>
+                    <div class="tech-item bootsrap">
+                        <img class="tech-image" src="img/tech/bootstrap.svg" alt="bootstrap" title="Популярный CSS фреймворк">
+                    </div>
+                    <div class="tech-item php">
+                        <img class="tech-image" src="img/tech/php.svg" alt="PHP" title="Серверный язык программирования">
+                    </div>
+                    <div class="tech-item vue">
+                        <img class="tech-image" src="img/tech/Vue.svg" alt="VueJS" title="JS-фреймворк для создания пользовательских интерфейсов">
+                    </div>
+                    <div class="tech-item wp">
+                        <img class="tech-image" src="img/tech/Wordpress.svg" alt="WordPress" title="Популярная CMS для создания блогов">
+                    </div>
+                </div>
+            </section>  
+            <section class="section-tarif">
+                <div class="tarif">
+                    <div class="tarif-item tarif-title">
+                        <p>Тарифы</p>
+                    </div>
+                    <div class="tarif-item tarif-description">
+                        <p>Представленные ниже цены зависят не только от того какой сайт вы хотите. Конечная цена будет озвучена после прочтения Вашего ТЗ</p>
+                    </div>
+                    <div class="tarif-item">
+                    <div class="tarif-name">Разработка лэндинга или сайт визитки</div>
+                    <div class="tarif-text">Небольшой сайт состоящий из одной страницы</div>
+                    <p class="project">
+                        <span>Обсудить проект</span>
+                        <svg class="project-img" width="16" height="12" viewBox="0 0 16 12" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5303 6.53033C15.8232 6.23744 15.8232 5.76256 15.5303 5.46967L10.7574 0.696699C10.4645 0.403806 9.98959 0.403806 9.6967 0.696699C9.40381 0.989593 9.40381 1.46447 9.6967 1.75736L13.9393 6L9.6967 10.2426C9.40381 10.5355 9.40381 11.0104 9.6967 11.3033C9.98959 11.5962 10.4645 11.5962 10.7574 11.3033L15.5303 6.53033ZM0 6.75H15V5.25H0V6.75Z" fill="#010101"/>
+                        </svg>
+                    </p>
+                    </div>
+                    <div class="tarif-item">
+                        <p class="tarif-pack">Что входит</p>
+                        <ul class="tarif-list">
+                            <li class="tarif-list-item">Сайт на CMS WordPress</li>
+                            <li class="tarif-list-item">Одна посадочная страница</li>
+                            <li class="tarif-list-item">От 7 дней</li>
+                        </ul>
+                        <div class="tarif-price">От 7 000 Р</div>
+                    </div>
+                </div>
+            </section> 
         </div>
+    </div>
         <a href="https://github.com/AlexTheGrognak/Portfolio" target="_blank">GitHub</a>
         <footer></footer>
     </div>
@@ -347,8 +407,17 @@
 <script src="script/jquery-ui.min.js"></script>
 <script>
     $( function() {
-      $( "#tabs" ).tabs({ active: 0});
+        $("#tabs").tabs({ active: 0});
+        $( document ).tooltip();
     } );
+    $( ".tech-image" ).tooltip({
+        position: {
+        my: "center top",
+        at: "center bottom-10",
+        collision: "none"
+    }
+    });
+    
     </script>
 </body>
 </html>
