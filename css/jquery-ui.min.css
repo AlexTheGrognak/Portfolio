@@ -711,9 +711,13 @@ button.ui-button::-moz-focus-inner {
 	text-overflow: ellipsis;
 }
 .ui-selectmenu-button.ui-button {
+	width: 100%;
+	background-color: rgba(243, 242, 240, 0.1);
+	color: #fff;
+	padding: 24px 20px 23px;
+	box-sizing: border-box;
 	text-align: left;
 	white-space: nowrap;
-	width: 14em;
 }
 .ui-selectmenu-icon.ui-icon {
 	float: right;
@@ -864,10 +868,9 @@ a:visited.ui-button,
 }
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #cccccc;
-	background: #ededed;
+	border: none;
 	font-weight: normal;
-	color: #2b2b2b;
+	outline: none;
 }
 a.ui-button:hover,
 a.ui-button:focus {
@@ -881,8 +884,7 @@ a.ui-button:focus {
 a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
-	border: 1px solid #003eff;
-	background: #007fff;
+	border: none;
 	font-weight: normal;
 	color: #ffffff;
 }
