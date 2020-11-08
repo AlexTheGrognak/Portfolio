@@ -39,6 +39,9 @@ body {
 .light .project-img path {
     fill: #010101;
 }
+.light .project:hover {
+    border-bottom: 2px solid #010101;
+}
 .light .social,
 .light .steps-item,
 .light .about-title, 
@@ -49,6 +52,57 @@ body {
     border-top: 1px solid #010101;
 }
 .light .steps-item {
+    border-bottom: 1px solid #010101;
+}
+.light .gradient {
+    background: linear-gradient(180deg, #E7E6E6 0%, rgba(231, 230, 230, 0) 100%);
+}
+.light .tech-item {
+    border-bottom: 1px solid #010101;
+    border-right: 1px solid #010101;
+    display: flex;
+    justify-content: center;
+}
+.light .tech-item:first-child,
+.light .tech-item:nth-child(5) {
+    border-left: 1px solid#010101;
+}
+.light .work {
+    border-bottom: 1px solid#010101;
+}
+.light .advantages {
+    border-top: 1px solid #010101;
+}
+.light .html, 
+.light .css, 
+.light .js, 
+.light .jquery {
+    border-top: 1px solid #010101;
+}
+.light .tarif-item {
+    border-bottom: 1px solid #010101;
+}
+.light .tarif-title, 
+.light .tarif-description {
+    border-bottom: 1px solid #010101;
+}
+.light .nav-info .nav-item::before,
+.light .nav-social .nav-item::before {
+    background:#010101;
+}
+.light .form-title,
+.light .form-description {
+    border-bottom: 1px solid #010101;
+}
+.light .footer-bottom {
+    color: rgba(1, 1, 1, 0.5);
+}
+.light .footer-link {
+    color: rgba(1, 1, 1, 0.5);
+    border-bottom: 1px solid rgba(1, 1, 1, 0.5);
+}
+.light .footer-link:hover {
+    color: #010101;
     border-bottom: 1px solid #010101;
 }
 .nav-info .nav-item {
@@ -265,13 +319,13 @@ header {
     height: 300px;
     position: absolute;
     left: -153px;
-    top: calc(50% - 125px);
+    top: calc(50% - 312px);
     z-index: 1;
 }
 .triangle-form {
     position: absolute;
     left: -177px;
-    top: calc(50% - 74px);
+    top: calc(50% - 258px);
 }
 .section-about {
     padding-top: 107px;
@@ -647,6 +701,7 @@ header {
 }
 
 .form {
+    position: relative;
     display: grid;
     grid-template-columns: 1fr 0.964fr;
 }
@@ -656,6 +711,7 @@ header {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     position: relative;
+    z-index: 2;
     border-bottom: 1px solid #F3F3F0;
     line-height: 150%;
 }
