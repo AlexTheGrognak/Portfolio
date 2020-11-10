@@ -1113,8 +1113,9 @@ form input[type=submit]:hover {
         top: calc(50% - 30px);
     }
     .social {
-        margin-top: 100px;
+        margin-top: 107px;
         padding-bottom: 30px;
+        padding-top: inherit;
     }
     .skill {
         padding-top: 30px;
@@ -1125,16 +1126,34 @@ form input[type=submit]:hover {
     .skill-item {
         padding-bottom: 10px;
     }
+    .section-about {
+        padding-top: inherit;
+    }
+
     .about-title {
         border: none !important;
         padding-bottom: 0;
+        padding-top: 40px;
+    }
+    .about-item > p {
+        display: flex;
+        justify-content: center;
     }
     .about-description{
-        padding: 20px 10px 64px 9px;
+        padding: 0px 10px 39px 87px;
     }
     .section-steps {
-        padding-top: 44px;
+        padding-top: inherit;
         padding-bottom: 61px;
+    }
+    .steps-item {
+        padding-bottom: 15px;
+    }
+    .steps-description {
+        flex: 0 0 60%;
+        padding-left: 40px;
+        color: #F3F2F0;
+        opacity: 0.8;
     }
     .project,
     .nav-social .nav-link,
@@ -1175,17 +1194,50 @@ form input[type=submit]:hover {
     .footer-top .nav-info {
         font-size: 14px;
     }
+    .portfolio {
+        margin-bottom: 69px;
+    }
     .circle-portfolio {
         width: 197px;
         height: 197px;
-        top: -220px;
-        right: 0;
+        top: -140px;
+        right: 155px;
     }
-    .nav-tabs {
-        justify-content: space-between;
-        width: 100%;
+    .nav-tabs-link {
+        padding-bottom: 15px;
+    }
+    .nav-tabs-item {
+        margin-right: 28px;
     }
     .tech-image {
         width: 35px;
     }
+    .nav-tabs {
+        top: -48px;
+    }
+    .work {
+        padding-top: 41px;
+    }
+    .work-title {
+        margin-bottom: 22px;
+    }
+    .work-list {
+        margin-bottom: 23px;
+    }
+    .work-thumb {
+        height: 190px;
+    }
+    .work-item {
+        padding-bottom: 39px;
+    }
+    .work-image {
+    height: 190px;
+}
+    .footer-top .nav {
+    justify-content: center;
+}
+.triangle-form {
+    left: 36px;
+    top: 43px;
+}
 }
