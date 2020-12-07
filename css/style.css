@@ -105,6 +105,14 @@ body {
     color: #010101;
     border-bottom: 1px solid #010101;
 }
+.light .nav-mobile {
+    background: #F3F2F0;
+    color: #232326;
+}
+.light .menu svg rect,
+.light .closeMenu rect{
+    fill: #232326;
+}
 .nav-info .nav-item {
     position: relative;
 }
@@ -149,6 +157,12 @@ body {
 }
 .light .triangle path{
     fill: #D40000;
+}
+.light .nav-mobile-list li {
+    border-top: 1px solid rgba(1, 1, 1, 0.2);
+}
+.light .nav-mobile-list :nth-child(5) {
+    border-bottom: 1px solid rgba(1, 1, 1, 0.2);
 }
 .wrapper {
     max-width: 1140px;
@@ -216,6 +230,16 @@ header {
 .nav-item:last-child {
     padding-right: 0;
 }
+.pop-up {
+    width: 600px;
+    height: 572px;
+    background: #232326;
+    position: absolute;
+    z-index: 3;
+}
+.light .pop-up {
+    background: #F3F2F0;
+}
 .nav-link {
     text-decoration: none;
     font-size: 14px;
@@ -223,6 +247,70 @@ header {
 }
 .nav-link:hover {
     color:#D40000;
+}
+.nav-mobile {
+    display: none;
+    position: absolute;
+    z-index: 5;
+    width: 360px;
+    height: 618px;
+    top: 0;
+    right: 0;
+    background: #232326;
+}
+.nav-mobile-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 8px;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.closeMenu {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    top: 20px;
+    right: 10px;
+}
+.nav-mobile-list {
+    list-style-type: none;
+    width: 340px;
+    height: 395px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 80px;
+    padding-left: 0;
+}
+.nav-mobile-list li {
+    padding: 20px 0 20px 0;
+    border-top: 1px solid rgba(243, 242, 240, 0.2);
+}
+.nav-mobile-list :nth-child(5) {
+    border-bottom: 1px solid rgba(243, 242, 240, 0.2);
+}
+.nav-mobile-list li > a {
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 150%;
+}
+.mobile-nav-info {
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.mobile-nav-link {
+    font-size: 12px!important;
+}
+.mobile-nav-item {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
 }
 .social {
     display: flex;
@@ -859,14 +947,31 @@ form input[type=submit]:hover {
         display: none;
     }
     .header-mobile {
+        position: relative;
+        height: 25px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding-top: 30px;
         padding-bottom: 40px;
     }
+    button :focus {
+        outline: none!important;
+    }
     .menu {
         background: transparent;
+        border: none;
+        outline: none!important;
+    }
+    .menu :focus {
+        border: none;
+        outline: none!important;
+    }
+    .menu :active {
+        border: none;
+        outline: none!important;
+    }
+    .header-mobile :focus {
         border: none;
     }
     .circle-main {
@@ -1050,10 +1155,13 @@ form input[type=submit]:hover {
     .steps-title {
         padding-right: 0;
         margin-bottom: 0;
+        max-width: 30%;
+        font-size: 16px;
     }
     .steps-description {
         flex: 0 0 100%;
-        max-width: 100%;
+        max-width: 70%;
+        margin-left: 10px;
     }
     .steps-title span {
         margin-right: 20px;
@@ -1084,6 +1192,22 @@ form input[type=submit]:hover {
 }
 
 @media (max-width: 550px) {
+    .nav-mobile {
+        height: 520px;
+    }
+    .nav-mobile-list {
+        height: 315px;
+    }
+    .nav-mobile-list li > a {
+        font-size: 16px;
+    }
+    .nav-mobile {
+        right: -15px;
+    }
+    .nav-item {
+        padding-left: 3px;
+        padding-right: 3px;
+    }
     .photo,
     .photo img {
         height: 215px;
@@ -1117,6 +1241,13 @@ form input[type=submit]:hover {
         padding-bottom: 30px;
         padding-top: inherit;
     }
+    .project {
+        margin: -5px;
+    }
+    .project-img {
+        margin-left: 0px;
+        margin-right: 10px;
+    }
     .skill {
         padding-top: 30px;
     }
@@ -1129,7 +1260,9 @@ form input[type=submit]:hover {
     .section-about {
         padding-top: inherit;
     }
-
+    .tarif-list-item {
+        font-size: 14px;
+    }
     .about-title {
         border: none !important;
         padding-bottom: 0;
@@ -1140,7 +1273,13 @@ form input[type=submit]:hover {
         justify-content: center;
     }
     .about-description{
-        padding: 0px 10px 39px 87px;
+        padding: 0px 10px 39px 10px;
+    }
+    .form-description {
+        font-size: 16px;
+    }
+    .circle-form {
+        z-index: 0;
     }
     .section-steps {
         padding-top: inherit;
@@ -1149,11 +1288,15 @@ form input[type=submit]:hover {
     .steps-item {
         padding-bottom: 15px;
     }
+    .steps-title {
+        font-size: 12px;
+    }
     .steps-description {
         flex: 0 0 60%;
         padding-left: 40px;
         color: #F3F2F0;
         opacity: 0.8;
+        max-width: 53%;
     }
     .project,
     .nav-social .nav-link,
@@ -1181,7 +1324,6 @@ form input[type=submit]:hover {
     }
     .about-title,
     .about-description,
-    .steps-title,
     .work-title,
     .tarif-title,
     .tarif-description,
@@ -1207,7 +1349,7 @@ form input[type=submit]:hover {
         padding-bottom: 15px;
     }
     .nav-tabs-item {
-        margin-right: 28px;
+        margin-right: 9px;
     }
     .tech-image {
         width: 35px;
@@ -1236,8 +1378,8 @@ form input[type=submit]:hover {
     .footer-top .nav {
     justify-content: center;
 }
-.triangle-form {
-    left: 36px;
-    top: 43px;
-}
+    .triangle-form {
+        left: 36px;
+        top: 27px;
+    }
 }
