@@ -231,14 +231,64 @@ header {
     padding-right: 0;
 }
 .pop-up {
+    top: calc(50% - 286px);
+    left: calc(50% - 300px);
+    position: fixed;
+    display: none;
     width: 600px;
     height: 572px;
-    background: #232326;
-    position: absolute;
-    z-index: 3;
+    background-color: #232326;
+    z-index: 4;
+    border: 1px solid rgba(1, 1, 1, 0.3);
+}
+.pop-up-wrapper {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pop-up-title {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #F3F2F0;
+    margin-top: 55px;
+    margin-bottom: 15px;
+}
+.pop-up-description {
+    width: 331px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: #F3F2F0;
+    margin-bottom: 30px;
+    margin-top: 0;
+}
+.pop-up-form {
+    padding-top: 0!important;
+    margin-top: 40px;
+    width: 560px;
+}
+.pop-up-close {
+    right: 20px!important;
+}
+hr {
+    width: 560px;
+    border: 1px solid #F3F2F0;
+    border-bottom: none;
 }
 .light .pop-up {
     background: #F3F2F0;
+}
+.light .pop-up-description,
+.light .pop-up-title {
+    color: #232326;
+}
+.light hr {
+    border: 1px solid #010101;
 }
 .nav-link {
     text-decoration: none;
@@ -857,6 +907,17 @@ form input {
     box-sizing: border-box;
     margin-bottom: 21px;
 }
+.light form input[type=text],
+.light .ui-selectmenu-button.ui-button {
+    background-color: rgba(1, 1, 1, 0.05)!important;
+}
+.light .ui-selectmenu-button.ui-button {
+    color: #010101;
+}
+
+.light form input[type=text]:focus {
+    color: #010101;
+}
 form input[type=submit] {
     background-color: #D40000;
     font-size: 16px;
@@ -871,9 +932,12 @@ form input[type=submit]:hover {
     background-color: #EA0E00;
     cursor: pointer;
 }
-.form input:focus {
-    outline: none;
+form input:focus {
+    outline: none!important;
     color: #F3F2F0;
+}
+form input[type=text] :focus {
+    outline: none!important;
 }
 .form-social .nav-social {
     padding-left: 0;
@@ -1139,6 +1203,26 @@ form input[type=submit]:hover {
 }
 
 @media (max-width: 600px) {
+    .pop-up {
+        top: calc(50% - 288px);
+        left: calc(50% - 180px);
+        width: 360px;
+        height: 577px;  
+    }
+    .pop-up-title {
+        font-size: 16px;
+        width: 179px;
+    }
+    .pop-up-description {
+        font-size: 16px;
+        width: 273px;
+    }
+    hr {
+        width: 286px;
+    }
+    .pop-up-form {
+        width: 286px;
+    }
     .tech-image {
         width: 50px;
     }
