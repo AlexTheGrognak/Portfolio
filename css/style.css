@@ -3,6 +3,44 @@ body {
     background-color: #F3F2F0;
     font-size: 14px;
 }
+.switch-alignment {
+    width: 135px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.switch-alignment p {
+    margin: 0;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #F3F2F0;
+}
+.light .switch-alignment p {
+    color: #010101;
+}
+.switch {
+    width: 42px;
+    height: 20px;
+    border: 1px solid #F3F2F0;
+    border-radius: 15px 15px;
+}
+.switch:hover {
+    cursor: pointer;
+}
+.switch-circle {
+    width: 20px;
+    height: 20px;
+    background-color: red;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+.light .switch-circle {
+    float: right;
+}
+.light .switch {
+    border: 1px solid #010101;
+}
 .dark {
     background-color: #232326;
     color: #F3F2F0; 
